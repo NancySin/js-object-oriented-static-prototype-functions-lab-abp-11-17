@@ -4,9 +4,7 @@ function IcebreakerResponse(email){
 
 
 IcebreakerResponse.BatchCreate = function(emails){
-  let icebreakers = []
-  emails.forEach(function(email){
-    icebreakers.push(new IcebreakerResponse(eamil))
-  })
-  return icebreakers
-}
+ return emails.map(function(email){
+   return new IcebreakerResponse(email)
+ })
+ }
